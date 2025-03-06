@@ -2,6 +2,7 @@
 *.sketch
 *.fig
 *.xd
+design
 
 # Dependencies
 /node_modules
@@ -17,6 +18,9 @@ npm-debug.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.parcel-cache/
+.cache
+.prettierignore
 
 # Testing
 /coverage
