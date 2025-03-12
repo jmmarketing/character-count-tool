@@ -10,3 +10,43 @@ $default-font-size: 1.6rem;
 // ######################
 // ## Color Variables ###
 // ######################
+
+// ------ Static Colors-----
+
+$color-neutral-900: #12131a;
+$color-neutral-800: #21222c;
+$color-neutral-700: #2a2b37;
+$color-neutral-600: #404254;
+$color-neutral-200: #e4e4ef;
+$color-neutral-100: #f2f2f7;
+$color-neutral-0: #fff;
+
+$color-purple-400: #d3a0fa;
+$color-purple-500: #c27cf8;
+
+$color-yellow: #ff9f00;
+
+$color-orange-500: #fe8159;
+$color-organge-800: #da3701;
+
+// ---- Color Mode Variables ---
+
+:root {
+  --title-text: $color-neutral-100;
+  --input-text: $color-neutral-200;
+  --body-text: $color-neutral-200;
+  --box-bar-bg: $color-neutral-800;
+  --box-border: $color-neutral-700;
+  --mode-box: $color-neutral-700;
+  --body-background: url("../../assets/images/bg-dark-theme.png");
+}
+
+[data-theme="light"] {
+  --title-text: $color-neutral-900;
+  --input-text: $color-neutral-700;
+  --body-text: $color-neutral-900;
+  --box-bar-bg: $color-neutral-100;
+  --box-border: $color-neutral-200;
+  --mode-box: $color-neutral-100;
+  --body-background: url("../../assets/images/bg-light-theme.png");
+}
