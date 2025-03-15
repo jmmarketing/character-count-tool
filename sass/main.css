@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+:root {
+  --title-text: #f2f2f7;
+  --input-text: #e4e4ef;
+  --body-text: #e4e4ef;
+  --box-bar-bg: #21222c;
+  --box-border: #2a2b37;
+  --mode-box: #2a2b37;
+  --body-background: url(/assets/images/bg-dark-theme.png);
+}
+
+[data-theme=light] {
+  --title-text: #12131a;
+  --input-text: #2a2b37;
+  --body-text: #12131a;
+  --box-bar-bg: #f2f2f7;
+  --box-border: #e4e4ef;
+  --mode-box: #f2f2f7;
+  --body-background: url(/assets/images/bg-light-theme.png);
+}
+
+/*
+0 - 600px:        Phone
+600 - 900px:      Tablet Portrait
+900 - 1200px:     Tablet Landscape
+[1200 - 1800px]:  Desktop - Where Normal Styles Apply
+1800px + :        Big Desktop
+*/
+/*
+$breakpoint argument choices: 
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px;
+
+
+ORDER [When refactoring for responsiveness]: Base + typography > general layout + grid > page layout > components
+*/
+body {
+  font-size: 2rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.6px;
+  color: var(--body-text);
+}
+
+.title {
+  font-size: 6.4rem;
+  letter-spacing: -1px;
+  line-height: 100%;
+  font-weight: 700;
+  color: var(--title-text);
+  width: 510px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -1px;
+}
+
+.label {
+  font-size: 1.6rem;
+  line-height: 130%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* Default browser font size is 16px. This gives you 10px baseline, making it easier to calculate rems*/
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-image: var(--body-background);
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+main {
+  max-width: 990px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  max-width: 990px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 48px;
+  justify-content: space-between;
+}
+
+.header-toggle {
+  width: 44px;
+  height: 44px;
+  background-color: var(--mode-box);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.header-toggle__icon {
+  width: 22px;
+  height: 22px;
+}/*# sourceMappingURL=main.css.map */

@@ -60,21 +60,21 @@ $color-organge-800: #da3701;
 // ---- Color Mode Variables ---
 
 :root {
-  --title-text: $color-neutral-100;
-  --input-text: $color-neutral-200;
-  --body-text: $color-neutral-200;
-  --box-bar-bg: $color-neutral-800;
-  --box-border: $color-neutral-700;
-  --mode-box: $color-neutral-700;
-  --body-background: url("../../assets/images/bg-dark-theme.png");
+  --title-text: #{$color-neutral-100};
+  --input-text: #{$color-neutral-200};
+  --body-text: #{$color-neutral-200};
+  --box-bar-bg: #{$color-neutral-800};
+  --box-border: #{$color-neutral-700};
+  --mode-box: #{$color-neutral-700};
+  --body-background: url(/assets/images/bg-dark-theme.png);
 }
 
 [data-theme="light"] {
-  --title-text: $color-neutral-900;
-  --input-text: $color-neutral-700;
-  --body-text: $color-neutral-900;
-  --box-bar-bg: $color-neutral-100;
-  --box-border: $color-neutral-200;
-  --mode-box: $color-neutral-100;
-  --body-background: url("../../assets/images/bg-light-theme.png");
+  --title-text: #{$color-neutral-900};
+  --input-text: #{$color-neutral-700};
+  --body-text: #{$color-neutral-900};
+  --box-bar-bg: #{$color-neutral-100};
+  --box-border: #{$color-neutral-200};
+  --mode-box: #{$color-neutral-100};
+  --body-background: url(/assets/images/bg-light-theme.png);
 }

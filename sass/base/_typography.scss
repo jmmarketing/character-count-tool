@@ -1,15 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
 body {
-  font-size: $default-font-size; //16px;
+  font-size: $default-font-size; //20px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.6px;
+  color: var(--body-text);
 }
 
-.heading-primary {
-  font-size: 7rem; //70px
+.title {
+  font-size: 6.4rem; //64px - 40px Mobile
+  letter-spacing: -1px;
+  line-height: 100%;
+  font-weight: 700;
+  color: var(--title-text);
+  width: 510px;
+  text-align: center;
 }
 
-.heading-secondary {
-  font-size: 3.5rem; //35px
-}
-
-.heading-tertiary {
+.subtitle {
   font-size: 2.4rem; //24px
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -1px;
+}
+
+.label {
+  font-size: 1.6rem; //16x
+  line-height: 130%;
 }

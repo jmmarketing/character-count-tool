@@ -1,3 +1,9 @@
+@mixin layout-sizing {
+  max-width: 990px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 // MEDIA QUERY MANAGER (can change breakpoints as needed, just boilerplate)
 /*
 0 - 600px:        Phone
