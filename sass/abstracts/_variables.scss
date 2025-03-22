@@ -65,7 +65,11 @@ $color-organge-800: #da3701;
   --body-text: #{$color-neutral-200};
   --box-bar-bg: #{$color-neutral-800};
   --box-border: #{$color-neutral-700};
+  --box-hover: #{$color-neutral-700};
+  --box-border-hover: #{$color-neutral-600};
+  --box-focus: #{$color-neutral-800};
   --mode-box: #{$color-neutral-700};
+  --error: #{$color-orange-500};
   --body-background: url(/assets/images/bg-dark-theme.png);
 }
 
@@ -75,6 +79,10 @@ $color-organge-800: #da3701;
   --body-text: #{$color-neutral-900};
   --box-bar-bg: #{$color-neutral-100};
   --box-border: #{$color-neutral-200};
+  --box-border-hover: #{$color-neutral-200};
+  --box-hover: #{$color-neutral-200};
+  --box-focus: #{$color-neutral-200};
   --mode-box: #{$color-neutral-100};
+  --error: #{$color-organge-800};
   --body-background: url(/assets/images/bg-light-theme.png);
 }
