@@ -41,6 +41,20 @@
         <span class="error-message"
           >&#9432; Limit reached! Your text exceeds # characters.</span
         >
+        <div class="input-options">
+          <div class="input-options__checkbox">
+            <input type="checkbox" name="spaces" id="spaces" />
+            <label for="spaces">Exclude Spaces</label>
+          </div>
+          <div class="input-options__checkbox">
+            <input type="checkbox" name="limit" id="limit" />
+            <label for="limit">Set Character Limit</label>
+            <input type="number" name="limit-count" id="limit-count" />
+          </div>
+          <p class="input-options__reading-time">
+            Approx. reading time: &lt;<span id="reading-time">1</span> minute
+          </p>
+        </div>
       </section>
       <section class="stats"></section>
     </main>
