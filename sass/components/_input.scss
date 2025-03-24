@@ -35,5 +35,15 @@
     box-shadow: 0 0 10px 0 $color-purple-400;
   }
 
+  &.invalid {
+    order: 1px solid var(--error);
+    box-shadow: 0 0 8px 0 var(--error);
+
+    & + .error-message {
+      display: block;
+      opacity: 1;
+    }
+  }
+
   cursor: pointer;
 }

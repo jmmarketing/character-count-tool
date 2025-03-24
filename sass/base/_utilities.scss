@@ -1,2 +1,8 @@
-.error {
+.error-message {
+  font-size: 1.6rem;
+  line-height: 130%;
+  color: var(--error);
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease;
 }

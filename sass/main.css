@@ -77,6 +77,15 @@ body {
   line-height: 130%;
 }
 
+.error-message {
+  font-size: 1.6rem;
+  line-height: 130%;
+  color: var(--error);
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
 *,
 *::before,
 *::after {
@@ -148,6 +157,14 @@ main {
   background: var(--box-focus);
   border: 2px solid #c27cf8;
   box-shadow: 0 0 10px 0 #d3a0fa;
+}
+.input-textarea.invalid {
+  order: 1px solid var(--error);
+  box-shadow: 0 0 8px 0 var(--error);
+}
+.input-textarea.invalid + .error-message {
+  display: block;
+  opacity: 1;
 }
 
 header {
