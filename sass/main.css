@@ -195,12 +195,12 @@ input[type=checkbox] {
   border: 1px solid var(--body-text);
   cursor: pointer;
 }
-input[type=checkbox]:checked {
+input[type=checkbox]:checked, input[type=checkbox]:hover {
   padding: 2px;
-  background: #d3a0fa;
+  background: #d3a0fa !important;
   border: none;
 }
-input[type=checkbox]:checked::after {
+input[type=checkbox]:checked::after, input[type=checkbox]:hover::after {
   content: "";
   position: absolute;
   left: 5px;
@@ -210,6 +210,12 @@ input[type=checkbox]:checked::after {
   border: solid #12131a;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+input[type=checkbox]:focus-visible {
+  outline: none;
+  border: 1px solid #e4e4ef;
+  background: #fff;
+  box-shadow: 0px 0px 0px 2px #fff, 0px 0px 0px 4px #d3a0fa;
 }
 
 header {

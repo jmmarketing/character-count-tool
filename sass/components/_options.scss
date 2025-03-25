@@ -28,21 +28,22 @@ input[type="checkbox"] {
 
   cursor: pointer;
 
-  &:checked {
+  &:checked,
+  &:hover {
     padding: 2px;
-    background: $color-purple-400;
+    background: $color-purple-400 !important;
     border: none;
 
     &::after {
-      content: "";
-      position: absolute;
-      left: 5px;
-      top: 2px;
-      width: 5px;
-      height: 10px;
-      border: solid $color-neutral-900;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
+      @include checked-state;
     }
+  }
+
+  &:focus-visible {
+    outline: none;
+    border: 1px solid $color-neutral-200;
+    background: $color-neutral-0;
+    box-shadow: 0px 0px 0px 2px $color-neutral-0,
+      0px 0px 0px 4px $color-purple-400;
   }
 }

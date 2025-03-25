@@ -4,6 +4,18 @@
   margin: 0 auto;
 }
 
+@mixin checked-state {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid $color-neutral-900;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
 // MEDIA QUERY MANAGER (can change breakpoints as needed, just boilerplate)
 /*
 0 - 600px:        Phone
