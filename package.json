@@ -4,7 +4,7 @@
   "description": "Starter files/folder for development projects. Uses MVC architecture & scss.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
+    "start": "parcel index.html --no-cache",
     "build": "parcel build index.html --public-url ./",
     "deploy": "gh-pages -d dist"
   },
