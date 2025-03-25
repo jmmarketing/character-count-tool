@@ -1,0 +1,48 @@
+.options {
+  display: flex;
+  gap: $spacing-300;
+  align-items: center;
+
+  &__reading-time {
+    flex: 1 1 30%;
+    text-align: right;
+  }
+
+  &__checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  position: relative;
+
+  background-color: transparent;
+  appearance: none;
+
+  border-radius: $radius-4;
+  border: 1px solid var(--body-text);
+
+  cursor: pointer;
+
+  &:checked {
+    padding: 2px;
+    background: $color-purple-400;
+    border: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid $color-neutral-900;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+}
