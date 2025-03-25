@@ -17,20 +17,22 @@
   overflow: hidden;
   min-width: 200px;
   width: calc((100% - 32px) / 3);
+  background-repeat: no-repeat;
+  background-position: right -17% top;
+
   &--purple {
     background-color: $color-purple-400;
     background-image: url(../assets/images/pattern-character-count.svg);
-    background-repeat: no-repeat;
-    background-position: right;
   }
 
   &--yellow {
+    background-color: $color-yellow;
+    background-image: url(../assets/images/pattern-word-count.svg);
   }
 
   &--orange {
-  }
-
-  &__name {
+    background-color: $color-orange-500;
+    background-image: url(../assets/images/pattern-sentence-count.svg);
   }
 
   &__title {

@@ -258,12 +258,20 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   overflow: hidden;
   min-width: 200px;
   width: calc((100% - 32px) / 3);
+  background-repeat: no-repeat;
+  background-position: right -17% top;
 }
 .stats-card--purple {
   background-color: #d3a0fa;
   background-image: url(../assets/images/pattern-character-count.svg);
-  background-repeat: no-repeat;
-  background-position: right;
+}
+.stats-card--yellow {
+  background-color: #ff9f00;
+  background-image: url(../assets/images/pattern-word-count.svg);
+}
+.stats-card--orange {
+  background-color: #fe8159;
+  background-image: url(../assets/images/pattern-sentence-count.svg);
 }
 .stats-card__title {
   text-align: unset;
