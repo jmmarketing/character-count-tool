@@ -47,3 +47,27 @@ input[type="checkbox"] {
       0px 0px 0px 4px $color-purple-400;
   }
 }
+
+input[type="number"] {
+  width: 55px;
+  background-color: transparent;
+  border-radius: $radius-6;
+  border: 1px solid $color-neutral-600;
+  padding: $spacing-050 $spacing-150;
+  outline: none;
+
+  color: var(--body-text);
+  font-family: "DM Sans";
+  font-size: 1.6rem;
+  line-height: 130%;
+  letter-spacing: -0.6px;
+
+  -moz-appearance: textfield;
+  appearance: none;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
