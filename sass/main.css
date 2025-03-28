@@ -37,6 +37,7 @@
 /*
 $breakpoint argument choices: 
 - phone
+- phone-l
 - tab-port
 - tab-land
 - big-desktop
@@ -61,8 +62,21 @@ body {
   line-height: 100%;
   font-weight: 700;
   color: var(--title-text);
-  width: 510px;
+  width: 100%;
+  max-width: 510px;
   text-align: center;
+  transition: font-size 0.3s ease-out;
+}
+@media only screen and (max-width: 40em) {
+  .title {
+    font-size: 5.2rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .title {
+    max-width: 343px;
+    font-size: 4rem;
+  }
 }
 
 .subtitle {
@@ -108,8 +122,13 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   background-image: var(--body-background);
-  padding-top: 32px;
-  padding-bottom: 64px;
+  padding: 32px 32px 64px;
+  transition: padding 0.3s ease-out;
+}
+@media only screen and (max-width: 31.25em) {
+  body {
+    padding: 16px;
+  }
 }
 
 main {
@@ -172,10 +191,25 @@ main {
   display: flex;
   gap: 24px;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 31.25em) {
+  .options {
+    flex-direction: column;
+    align-items: unset;
+    gap: 12px;
+  }
 }
 .options__reading-time {
   flex: 1 1 30%;
   text-align: right;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+@media only screen and (max-width: 40em) {
+  .options__reading-time {
+    text-align: left;
+  }
 }
 .options__checkbox {
   display: flex;
@@ -243,16 +277,28 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   height: 150px;
   border-radius: 12px;
   align-items: flex-start;
+  justify-content: center;
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   color: #12131a;
   overflow: hidden;
-  min-width: 200px;
+  min-width: 175px;
   width: calc((100% - 32px) / 3);
   background-repeat: no-repeat;
   background-position: right -17% top;
+}
+@media only screen and (max-width: 40em) {
+  .stats-card {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .stats-card {
+    padding: 20px;
+    height: 130px;
+  }
 }
 .stats-card--purple {
   background-color: #d3a0fa;
@@ -303,6 +349,8 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
 .letters__percent {
   flex-grow: 1;
   text-align: right;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
 .see-more {
@@ -353,6 +401,7 @@ header {
   flex-wrap: wrap;
   gap: 16px;
   max-width: 990px;
+  width: 100%;
 }
 
 .density-container {

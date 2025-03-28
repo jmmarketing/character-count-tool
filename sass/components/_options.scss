@@ -2,10 +2,22 @@
   display: flex;
   gap: $spacing-300;
   align-items: center;
+  flex-wrap: wrap;
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: unset;
+    gap: $spacing-150;
+  }
 
   &__reading-time {
     flex: 1 1 30%;
     text-align: right;
+    min-width: fit-content;
+
+    @include respond(phone-l) {
+      text-align: left;
+    }
   }
 
   &__checkbox {

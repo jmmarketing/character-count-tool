@@ -2,16 +2,26 @@
   height: 150px;
   border-radius: $radius-12;
   align-items: flex-start;
+  justify-content: center;
   padding: $spacing-200;
   display: flex;
   flex-direction: column;
   gap: $spacing-100;
   color: $color-neutral-900;
   overflow: hidden;
-  min-width: 200px;
+  min-width: 175px;
   width: calc((100% - 32px) / 3);
   background-repeat: no-repeat;
   background-position: right -17% top;
+
+  @include respond(phone-l) {
+    width: 100%;
+  }
+
+  @include respond(phone) {
+    padding: $spacing-250;
+    height: 130px;
+  }
 
   &--purple {
     background-color: $color-purple-400;

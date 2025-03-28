@@ -35,5 +35,6 @@
   &__percent {
     flex-grow: 1;
     text-align: right;
+    min-width: fit-content;
   }
 }

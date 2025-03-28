@@ -15,8 +15,14 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   background-image: var(--body-background);
-  padding-top: $spacing-400;
-  padding-bottom: $spacing-800;
+  // padding-top: $spacing-400;
+  // padding-bottom: $spacing-800;
+  padding: $spacing-400 $spacing-400 $spacing-800;
+  transition: padding 0.3s ease-out;
+
+  @include respond(phone) {
+    padding: $spacing-200;
+  }
 }
 
 main {

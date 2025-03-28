@@ -15,8 +15,19 @@ body {
   line-height: 100%;
   font-weight: 700;
   color: var(--title-text);
-  width: 510px;
+  width: 100%;
+  max-width: 510px;
   text-align: center;
+  transition: font-size 0.3s ease-out;
+
+  @include respond(phone-l) {
+    font-size: 5.2rem;
+  }
+
+  @include respond(phone) {
+    max-width: 343px;
+    font-size: 4rem;
+  }
 }
 
 .subtitle {

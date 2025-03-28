@@ -28,6 +28,7 @@
 /*
 $breakpoint argument choices: 
 - phone
+- phone-l
 - tab-port
 - tab-land
 - big-desktop
@@ -40,8 +41,15 @@ ORDER [When refactoring for responsiveness]: Base + typography > general layout 
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media only screen and (max-width: 36.5em) {
-      //580px
+    @media only screen and (max-width: 31.25em) {
+      //500px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-l {
+    @media only screen and (max-width: 40em) {
+      //640px
       @content;
     }
   }
