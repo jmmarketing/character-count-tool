@@ -1,5 +1,7 @@
 import darkLogo from "../../../assets/images/logo-dark-theme.svg";
 import lightLogo from "../../../assets/images/logo-light-theme.svg";
+import sunIcon from "../../../assets/images/icon-sun.svg";
+import moonIcon from "../../../assets/images/icon-moon.svg";
 
 class ModeToggleView {
   _toggle = document.querySelector(".header-toggle");
@@ -13,6 +15,10 @@ class ModeToggleView {
       dark: darkLogo,
       light: lightLogo,
     },
+    icons: {
+      dark: sunIcon,
+      light: moonIcon,
+    },
   };
 
   addToggleEventHandler(eventFunction) {
@@ -20,7 +26,10 @@ class ModeToggleView {
   }
 
   _toggleModeElements() {
-    this._toggleIcon.setAttribute("src", ``);
+    this._toggleIcon.setAttribute(
+      "src",
+      this._display.icons[this._display.mode]
+    );
 
     this._logoElement.setAttribute(
       "src",
