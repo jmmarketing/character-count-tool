@@ -253,7 +253,8 @@ input[type=checkbox]:focus-visible {
 }
 
 input[type=number] {
-  width: 55px;
+  width: 57px;
+  height: 28px;
   background-color: transparent;
   border-radius: 6px;
   border: 1px solid #404254;

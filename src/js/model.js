@@ -10,6 +10,7 @@
 - Periods = Sentence count. 
 - Letter Density
     - Reduce over string and increase count based on letter (MDN has example i think). 
+- Time Read = Need to come up with equation. Word count / avg words read a minute? Round up to closest minute. 
 
 Out put should be one data object. 
 
