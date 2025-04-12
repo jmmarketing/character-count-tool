@@ -9,6 +9,7 @@ class InputView {
     input: null,
     spaces: false,
     limit: null,
+    error: false,
   };
 
   constructor() {
@@ -34,6 +35,7 @@ class InputView {
       this._inputData.limit = null;
 
       this._limit.value = "";
+      this._toggleError();
     }
 
     console.log(this._inputData);
@@ -58,11 +60,22 @@ class InputView {
     const str = this._inputData.input;
     const limit = this._inputData.limit;
 
-    if (limit && str)
-      str.length > limit
-        ? this._input.classList.add("invalid")
-        : this._input.classList.remove("invalid");
-    else this._input.classList.remove("invalid");
+    if (!limit || !str) {
+      this._input.classList.remove("invalid");
+      return;
+    }
+
+    if (str.length > limit) {
+      this._markupError();
+      this._input.classList.add("invalid");
+      return;
+    }
+
+    this._input.classList.remove("invalid");
+  }
+
+  _markupError() {
+    this._errorElement.textContent = `ⓘ Limit reached! Your text exceeds ${this._inputData.limit} characters.`;
   }
 }
 
