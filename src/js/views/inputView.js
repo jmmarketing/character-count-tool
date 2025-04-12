@@ -27,6 +27,18 @@ class InputView {
     this._input.addEventListener("change", this._getInputString.bind(this));
   }
 
+  addHandlerSendInputData(handler) {
+    [this._input, this._characterOption, this._limit, this._spacesOption].map(
+      (element) => element.addEventListener("change", handler)
+    );
+  }
+
+  getInputData() {
+    return this._inputData;
+  }
+
+  _toggleExcludeSpaces() {}
+
   _toggleCharacterLimit() {
     if (this._characterOption.checked) {
       this._limit.classList.remove("hide");
@@ -35,16 +47,15 @@ class InputView {
       this._inputData.limit = null;
 
       this._limit.value = "";
-      this._toggleError();
     }
-
-    console.log(this._inputData);
+    this._toggleError();
+    // console.log(this._inputData);
   }
 
   _setCharacterLimit() {
     const characterLimit = this._limit.valueAsNumber;
     characterLimit !== NaN && (this._inputData.limit = characterLimit);
-    console.log(this._inputData);
+    // console.log(this._inputData);
 
     this._toggleError();
   }
@@ -62,16 +73,19 @@ class InputView {
 
     if (!limit || !str) {
       this._input.classList.remove("invalid");
+      this._inputData.error = false;
       return;
     }
 
     if (str.length > limit) {
       this._markupError();
       this._input.classList.add("invalid");
+      this._inputData.error = true;
       return;
     }
 
     this._input.classList.remove("invalid");
+    this._inputData.error = false;
   }
 
   _markupError() {
