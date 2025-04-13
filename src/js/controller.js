@@ -11,14 +11,14 @@ const controlModeToggle = function () {
   toggleView.changeMode();
 };
 
-const controlGettingInputData = function () {
+const controlGetInputData = function () {
   const data = inputView.getInputData();
   console.log(data);
 };
 
 function init() {
   toggleView.addToggleEventHandler(controlModeToggle);
-  inputView.addHandlerSendInputData(controlGettingInputData);
+  inputView.addHandlerSendInputData(controlGetInputData);
 }
 
 init();
