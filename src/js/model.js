@@ -10,8 +10,32 @@
 - Periods = Sentence count. 
 - Letter Density
     - Reduce over string and increase count based on letter (MDN has example i think). 
-- Time Read = Need to come up with equation. Word count / avg words read a minute? Round up to closest minute. 
+- Time Read = Need to come up with equation. Word count / avg words read a minute? Round up to closest minute. 180/min
 
 Out put should be one data object. 
 
 */
+
+export let stats = {
+  characters: 0,
+  words: 0,
+  sentences: 0,
+  readtime: 0,
+  density: {},
+};
+
+export function compileStats(obj) {
+  console.log("compileStat Function is called!");
+  console.log(obj);
+  return stats;
+}
+
+function charCount(string) {}
+
+function wordCount(string) {}
+
+function sentenceCount(string) {}
+
+function readTime(num) {}
+
+function letterDensity(string) {}

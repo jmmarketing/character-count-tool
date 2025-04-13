@@ -13,8 +13,14 @@ const controlModeToggle = function () {
 
 const controlGetInputData = function () {
   const data = inputView.getInputData();
-  console.log(data);
+  console.warn("HERE IS YOUR DATA");
+
+  if (data.error || !data.input) return;
+
+  const dataStats = model.compileStats(data);
 };
+
+const controlRenderStats = function (obj) {};
 
 function init() {
   toggleView.addToggleEventHandler(controlModeToggle);
