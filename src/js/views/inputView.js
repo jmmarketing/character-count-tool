@@ -63,7 +63,6 @@ class InputView {
   _setCharacterLimit() {
     const characterLimit = this._limit.valueAsNumber;
     characterLimit !== NaN && (this._inputData.limit = characterLimit);
-    // console.log(this._inputData);
 
     this._toggleError();
   }
@@ -79,7 +78,7 @@ class InputView {
     const str = this._inputData.input;
     const limit = this._inputData.limit;
 
-    if (!limit || !str) {
+    if (!Number.isFinite(limit) || !str) {
       this._input.classList.remove("invalid");
       this._inputData.error = false;
       return;
