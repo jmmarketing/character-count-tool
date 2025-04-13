@@ -25,6 +25,11 @@ class InputView {
     this._limit.addEventListener("change", this._setCharacterLimit.bind(this));
 
     this._input.addEventListener("change", this._getInputString.bind(this));
+
+    this._spacesOption.addEventListener(
+      "change",
+      this._toggleExcludeSpaces.bind(this)
+    );
   }
 
   addHandlerSendInputData(handler) {
@@ -37,7 +42,10 @@ class InputView {
     return this._inputData;
   }
 
-  _toggleExcludeSpaces() {}
+  _toggleExcludeSpaces() {
+    this._inputData.spaces = !this._inputData.spaces;
+    // console.log(this._inputData);
+  }
 
   _toggleCharacterLimit() {
     if (this._characterOption.checked) {
