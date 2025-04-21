@@ -27,6 +27,7 @@ export let stats = {
 export function compileStats(obj) {
   console.log("compileStat Function is called!");
   charCount(obj.input, obj.spaces);
+  wordCount(obj.input);
   console.log(stats);
   return stats;
 }
@@ -38,7 +39,11 @@ function charCount(string, spaces = false) {
   stats.characters = spaces ? characterCount - spacesCount : characterCount;
 }
 
-function wordCount(string) {}
+function wordCount(string) {
+  const words = string.trim().split(" ").length;
+
+  stats.words = words;
+}
 
 function sentenceCount(string) {}
 
