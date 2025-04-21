@@ -29,6 +29,7 @@ export function compileStats(obj) {
   charCount(obj.input, obj.spaces);
   wordCount(obj.input);
   sentenceCount(obj.input);
+  readTime(stats.words);
   console.log(stats);
   return stats;
 }
@@ -52,6 +53,10 @@ function sentenceCount(string) {
   stats.sentences = sentences;
 }
 
-function readTime(num) {}
+function readTime(num) {
+  const time = +(num / 180).toFixed(2);
+
+  stats.readtime = time;
+}
 
 function letterDensity(string) {}
