@@ -28,6 +28,7 @@ export function compileStats(obj) {
   console.log("compileStat Function is called!");
   charCount(obj.input, obj.spaces);
   wordCount(obj.input);
+  sentenceCount(obj.input);
   console.log(stats);
   return stats;
 }
@@ -45,7 +46,11 @@ function wordCount(string) {
   stats.words = words;
 }
 
-function sentenceCount(string) {}
+function sentenceCount(string) {
+  const sentences = string.trim().split(".").length - 1;
+
+  stats.sentences = sentences;
+}
 
 function readTime(num) {}
 
