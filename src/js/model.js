@@ -63,5 +63,17 @@ function readTime(num) {
 function letterDensity(string) {
   stats.density = {};
   const letters = string.split("").filter((l) => l !== " ");
-  console.log(letters);
+
+  for (const letter of letters) {
+    if (!stats.density[letter]) {
+      stats.density[letter] = {};
+      stats.density[letter].count = 0;
+      stats.density[letter].percent = 0;
+    }
+
+    stats.density[letter].count++;
+    stats.density[letter].percent = (
+      stats.density[letter].count / stats.characters
+    ).toFixed(2);
+  }
 }
