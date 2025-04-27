@@ -16,5 +16,13 @@ class StatsView {
   _densityContainer = document.querySelector(".letters__container");
   _noCharacterMessage = document.querySelector("#no-characters");
   _seeMoreElement = document.querySelector(".see-more");
+
+  renderStatistics(obj) {
+    this._renderReadingTime(obj.readtime);
+  }
+
+  _renderReadingTime(num) {
+    this._readingTime.textContent = num < 1 ? "<1" : Math.ceil(num);
+  }
 }
 export default new StatsView();

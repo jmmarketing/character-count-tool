@@ -19,12 +19,13 @@ const controlGetInputData = function () {
   if (data.error || !data.input) return;
 
   const dataStats = model.compileStats(data);
+  console.log(dataStats);
 
   controlRenderStats(dataStats);
 };
 
 const controlRenderStats = function (obj) {
-  console.log("Control Render Stats CALLED");
+  statsView.renderStatistics(obj);
 };
 
 function init() {
