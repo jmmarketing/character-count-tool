@@ -65,14 +65,18 @@ function letterDensity(string) {
   const letters = string.split("").filter((l) => l !== " ");
 
   for (const letter of letters) {
-    if (!stats.density[letter]) {
-      stats.density[letter] = {};
-      stats.density[letter].count = 0;
-      stats.density[letter].percent = 0;
+    let letterStat = stats.density[letter];
+
+    if (!letterStat) {
+      letterStat = {
+        count: 0,
+        percent: 0,
+      };
+      stats.density[letter] = letterStat;
     }
 
-    stats.density[letter].count++;
-    stats.density[letter].percent = (
+    letterStat.count++;
+    letterStat.percent = +(
       stats.density[letter].count / stats.characters
     ).toFixed(2);
   }
