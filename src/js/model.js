@@ -30,6 +30,7 @@ export function compileStats(obj) {
   wordCount(obj.input);
   sentenceCount(obj.input);
   readTime(stats.words);
+  letterDensity(obj.input);
   console.log(stats);
   return stats;
 }
@@ -59,4 +60,8 @@ function readTime(num) {
   stats.readtime = time;
 }
 
-function letterDensity(string) {}
+function letterDensity(string) {
+  stats.density = {};
+  const letters = string.split("").filter((l) => l !== " ");
+  console.log(letters);
+}
