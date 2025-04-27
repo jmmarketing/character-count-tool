@@ -31,7 +31,7 @@ export function compileStats(obj) {
   sentenceCount(obj.input);
   readTime(stats.words);
   letterDensity(obj.input);
-  console.log(stats);
+  // console.log(stats);
   return stats;
 }
 
