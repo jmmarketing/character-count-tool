@@ -65,7 +65,7 @@ function letterDensity(string) {
   const letters = string
     .toLowerCase()
     .split("")
-    .filter((l) => l !== " ");
+    .filter((l) => !/[ .!?]/.test(l));
 
   for (const letter of letters) {
     let letterStat = stats.density[letter];
