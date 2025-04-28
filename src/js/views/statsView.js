@@ -17,12 +17,21 @@ class StatsView {
   _noCharacterMessage = document.querySelector("#no-characters");
   _seeMoreElement = document.querySelector(".see-more");
 
-  renderStatistics(obj) {
-    this._renderReadingTime(obj.readtime);
+  renderStatistics(dataStatsObj) {
+    this._renderReadingTime(dataStatsObj.readtime);
+    this._renderCountNumbers(dataStatsObj);
   }
 
   _renderReadingTime(num) {
     this._readingTime.textContent = num < 1 ? "<1" : Math.ceil(num);
+  }
+
+  _renderCountNumbers(dataStatsObj) {
+    const { characters, words, sentences } = dataStatsObj;
+
+    this._characters.textContent = characters;
+    this._words.textContent = words;
+    this._sentences.textContent = sentences;
   }
 }
 export default new StatsView();

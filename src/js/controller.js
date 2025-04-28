@@ -16,7 +16,7 @@ const controlGetInputData = function () {
   const data = inputView.getInputData();
   console.warn("HERE IS YOUR DATA");
 
-  if (data.error || !data.input) return;
+  if (data.error || !data.input) return; //Reset to 0 function needed for statsView?
 
   const dataStats = model.compileStats(data);
   console.log(dataStats);

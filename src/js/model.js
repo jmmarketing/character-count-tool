@@ -49,7 +49,7 @@ function wordCount(string) {
 }
 
 function sentenceCount(string) {
-  const sentences = string.trim().split(".").length - 1;
+  const sentences = string.trim().split(/[.!?]/).length - 1;
 
   stats.sentences = sentences;
 }
@@ -62,7 +62,10 @@ function readTime(num) {
 
 function letterDensity(string) {
   stats.density = {};
-  const letters = string.split("").filter((l) => l !== " ");
+  const letters = string
+    .toLowerCase()
+    .split("")
+    .filter((l) => l !== " ");
 
   for (const letter of letters) {
     let letterStat = stats.density[letter];
