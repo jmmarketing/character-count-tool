@@ -18,17 +18,16 @@ class StatsView {
   _seeMoreElement = document.querySelector(".see-more");
 
   renderStatistics(dataStatsObj) {
-    this._renderReadingTime(dataStatsObj.readtime);
-    this._renderCountNumbers(dataStatsObj);
+    const { characters, words, sentences, readtime, density } = dataStatsObj;
+    this._renderReadingTime(readtime);
+    this._renderCountNumbers(characters, words, sentences);
   }
 
   _renderReadingTime(num) {
     this._readingTime.textContent = num < 1 ? "<1" : Math.ceil(num);
   }
 
-  _renderCountNumbers(dataStatsObj) {
-    const { characters, words, sentences } = dataStatsObj;
-
+  _renderCountNumbers(characters = 0, words = 0, sentences = 0) {
     this._characters.textContent = characters;
     this._words.textContent = words;
     this._sentences.textContent = sentences;
