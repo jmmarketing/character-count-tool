@@ -321,6 +321,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
 .letters__container {
   display: flex;
   width: 100%;
+  gap: 12px;
 }
 
 .letters__item {
@@ -329,6 +330,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   align-items: center;
   align-self: stretch;
   width: 100%;
+  height: 21px;
 }
 .letters__letter {
   width: 16px;

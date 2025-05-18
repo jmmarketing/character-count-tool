@@ -35,23 +35,32 @@ class StatsView {
   }
 
   _renderDensity(obj) {
-    console.warn("DENSITY OBJECT BELOW");
-    console.log(obj);
-
-    console.warn("DENSITY SORTED");
     const sortedLetters = Object.keys(obj)
       .map((letter) => ({ letter, ...obj[letter] }))
       .sort((a, b) => b.count - a.count);
 
     console.log(sortedLetters);
 
-    // <div class="letters__item">
-    //   <p class="label letters__letter">E</p>
-    //   <div class="letters__bar">
-    //       <div class="letters__bar--fill"></div>
-    //   </div>
-    //   <p class="label letters__percent">40 (16.06%)</p>
-    // </div>
+    const lettersFragment = document.createDocumentFragment();
+
+    sortedLetters.forEach((l) => {
+      const { letter, count, percent } = l;
+      const html = `
+      <div class="letters__item">
+        <p class="label letters__letter">${letter.toUpperCase()}</p>
+        <div class="letters__bar">
+            <div class="letters__bar--fill" style="width: ${
+              percent * 100
+            }%"></div>
+        </div>
+        <p class="label letters__percent">${count} (${percent * 100}%)</p>
+      </div>
+      `;
+
+      lettersFragment.appendChild(html);
+    });
+
+    this._densityContainer.appendChild(lettersFragment);
   }
 }
 export default new StatsView();
