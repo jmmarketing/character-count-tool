@@ -345,7 +345,6 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   height: 12px;
   border-radius: 999px;
   background-color: #d3a0fa;
-  width: 16.06%;
 }
 .letters__percent {
   flex-grow: 1;

@@ -21,6 +21,7 @@ class StatsView {
     const { characters, words, sentences, readtime, density } = dataStatsObj;
     this._renderReadingTime(readtime);
     this._renderCountNumbers(characters, words, sentences);
+    this._renderDensity(density);
   }
 
   _renderReadingTime(num) {
@@ -31,6 +32,26 @@ class StatsView {
     this._characters.textContent = characters;
     this._words.textContent = words;
     this._sentences.textContent = sentences;
+  }
+
+  _renderDensity(obj) {
+    console.warn("DENSITY OBJECT BELOW");
+    console.log(obj);
+
+    console.warn("DENSITY SORTED");
+    const sortedLetters = Object.keys(obj)
+      .map((letter) => ({ letter, ...obj[letter] }))
+      .sort((a, b) => b.count - a.count);
+
+    console.log(sortedLetters);
+
+    // <div class="letters__item">
+    //   <p class="label letters__letter">E</p>
+    //   <div class="letters__bar">
+    //       <div class="letters__bar--fill"></div>
+    //   </div>
+    //   <p class="label letters__percent">40 (16.06%)</p>
+    // </div>
   }
 }
 export default new StatsView();
