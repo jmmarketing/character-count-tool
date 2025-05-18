@@ -41,11 +41,10 @@ class StatsView {
 
     console.log(sortedLetters);
 
-    const lettersFragment = document.createDocumentFragment();
-
-    sortedLetters.forEach((l) => {
-      const { letter, count, percent } = l;
-      const html = `
+    const lettersHTML = sortedLetters
+      .map((l) => {
+        const { letter, count, percent } = l;
+        return `
       <div class="letters__item">
         <p class="label letters__letter">${letter.toUpperCase()}</p>
         <div class="letters__bar">
@@ -53,14 +52,16 @@ class StatsView {
               percent * 100
             }%"></div>
         </div>
-        <p class="label letters__percent">${count} (${percent * 100}%)</p>
+        <p class="label letters__percent">${count} (${(percent * 100).toFixed(
+          2
+        )}%)</p>
       </div>
       `;
+      })
+      .join(" ");
 
-      lettersFragment.appendChild(html);
-    });
-
-    this._densityContainer.appendChild(lettersFragment);
+    this._densityContainer.innerHTML = "";
+    this._densityContainer.insertAdjacentHTML("beforeend", lettersHTML);
   }
 }
 export default new StatsView();
