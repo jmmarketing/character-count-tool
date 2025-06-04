@@ -17,6 +17,10 @@ class StatsView {
   _noCharacterMessage = document.querySelector("#no-characters");
   _seeMoreElement = document.querySelector(".see-more");
 
+  constructor() {
+    this._seeMoreElement.addEventListener("click", this._showMore.bind(this));
+  }
+
   renderStatistics(dataStatsObj) {
     const { characters, words, sentences, readtime, density } = dataStatsObj;
     this._renderReadingTime(readtime);
@@ -32,6 +36,10 @@ class StatsView {
     this._characters.textContent = characters;
     this._words.textContent = words;
     this._sentences.textContent = sentences;
+  }
+
+  _showMore() {
+    console.log("SHOW ME MOOOOORE!");
   }
 
   _renderDensity(obj) {
@@ -60,9 +68,12 @@ class StatsView {
       })
       .join(" ");
 
-    this._densityContainer.classList.toggle("hide");
-    this._noCharacterMessage.classList.toggle("hide");
-    this._seeMoreElement.classList.toggle("hide");
+    /* Possible refactor into own function */
+    this._densityContainer.classList.remove("hide");
+    this._noCharacterMessage.classList.add("hide");
+    this._seeMoreElement.classList.remove("hide");
+    /* ------ */
+
     this._densityContainer.innerHTML = "";
     this._densityContainer.insertAdjacentHTML("beforeend", lettersHTML);
   }
