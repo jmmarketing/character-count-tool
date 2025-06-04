@@ -60,6 +60,9 @@ class StatsView {
       })
       .join(" ");
 
+    this._densityContainer.classList.toggle("hide");
+    this._noCharacterMessage.classList.toggle("hide");
+    this._seeMoreElement.classList.toggle("hide");
     this._densityContainer.innerHTML = "";
     this._densityContainer.insertAdjacentHTML("beforeend", lettersHTML);
   }

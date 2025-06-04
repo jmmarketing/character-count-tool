@@ -3,6 +3,8 @@
   flex-direction: column;
   width: 100%;
   gap: $spacing-150;
+  max-height: 155px;
+  overflow-y: hidden;
 }
 
 .letters {
