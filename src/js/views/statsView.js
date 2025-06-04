@@ -39,7 +39,18 @@ class StatsView {
   }
 
   _showMore() {
-    console.log("SHOW ME MOOOOORE!");
+    const isOpen = +this._seeMoreElement.dataset.open;
+    console.log(isOpen);
+    if (!isOpen) {
+      this._densityContainer.style.maxHeight = "fit-content";
+      this._seeMoreElement.textContent = "See less";
+    }
+
+    if (isOpen) {
+      console.log(isOpen);
+      this._densityContainer.style.removePropety("max-height");
+      this._seeMoreElement.textContent = "See more";
+    }
   }
 
   _renderDensity(obj) {
