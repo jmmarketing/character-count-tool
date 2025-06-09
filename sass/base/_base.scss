@@ -19,6 +19,7 @@ body {
   // padding-bottom: $spacing-800;
   padding: $spacing-400 $spacing-400 $spacing-800;
   transition: padding 0.3s ease-out;
+  height: 100vh;
 
   @include respond(phone) {
     padding: $spacing-200;
