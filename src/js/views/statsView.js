@@ -90,5 +90,13 @@ class StatsView {
     this._densityContainer.innerHTML = "";
     this._densityContainer.insertAdjacentHTML("beforeend", lettersHTML);
   }
+
+  clearStatistics() {
+    this._densityContainer.classList.add("hide");
+    this._noCharacterMessage.classList.remove("hide");
+    this._seeMoreElement.classList.add("hide");
+
+    this._renderCountNumbers();
+  }
 }
 export default new StatsView();

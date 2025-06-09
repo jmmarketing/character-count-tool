@@ -16,7 +16,10 @@ const controlGetInputData = function () {
   const data = inputView.getInputData();
   console.warn("HERE IS YOUR DATA");
 
-  if (data.error || !data.input) return; //Reset to 0 & 'no character' function needed for statsView?
+  if (data.error || !data.input) {
+    statsView.clearStatistics();
+    return;
+  } //Reset to 0 & 'no character' function needed for statsView?
 
   const dataStats = model.compileStats(data);
   console.log(dataStats);
