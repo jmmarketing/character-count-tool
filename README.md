@@ -68,14 +68,10 @@ It is not complex, but just very clean. I like that.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Just need to keep coding consistency. Can not be having weeks/month(s) of gaps between projects. MVC is getting more fluid/natural to develop with, though it can be a bit overkill for some of these projects.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Jeff McLean Design, Development, Marketing](https://www.jeffreymclean.com)
+- Frontend Mentor - [@jmmarketing](https://www.frontendmentor.io/profile/jmmarketing)
+- Twitter - [@jeffe_mclean](https://www.twitter.com/jeffe_mclean)
