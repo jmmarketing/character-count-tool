@@ -24,7 +24,7 @@ class InputView {
 
     this._limit.addEventListener("change", this._setCharacterLimit.bind(this));
 
-    this._input.addEventListener("change", this._getInputString.bind(this));
+    this._input.addEventListener("keyup", this._getInputString.bind(this));
 
     this._spacesOption.addEventListener(
       "change",
@@ -33,9 +33,11 @@ class InputView {
   }
 
   addHandlerSendInputData(handler) {
-    [this._input, this._characterOption, this._limit, this._spacesOption].map(
-      (element) => element.addEventListener("change", handler)
+    [this._characterOption, this._limit, this._spacesOption].map((element) =>
+      element.addEventListener("change", handler)
     );
+
+    this._input.addEventListener("keyup", handler);
   }
 
   getInputData() {

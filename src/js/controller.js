@@ -17,7 +17,7 @@ const controlGetInputData = function () {
   console.warn("HERE IS YOUR DATA");
 
   if (data.error || !data.input) {
-    statsView.clearStatistics();
+    // statsView.clearStatistics();
     return;
   } //Reset to 0 & 'no character' function needed for statsView?
 
