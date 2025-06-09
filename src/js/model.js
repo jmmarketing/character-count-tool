@@ -62,6 +62,8 @@ function readTime(num) {
 
 function letterDensity(string) {
   stats.density = {};
+  const characterCount = string.length - (string.split(" ").length - 1);
+
   const letters = string
     .toLowerCase()
     .split("")
@@ -80,7 +82,7 @@ function letterDensity(string) {
 
     letterStat.count++;
     letterStat.percent = +(
-      stats.density[letter].count / stats.characters
+      stats.density[letter].count / characterCount
     ).toFixed(2);
   }
 }
