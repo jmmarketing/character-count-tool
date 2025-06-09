@@ -366,8 +366,8 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   display: inline-block;
   width: 8px;
   height: 8px;
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
+  border-bottom: 2px solid var(--body-text);
+  border-right: 2px solid var(--body-text);
   transform: rotate(45deg);
   margin-left: 12px;
   margin-bottom: 5px;
