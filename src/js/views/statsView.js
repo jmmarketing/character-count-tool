@@ -39,17 +39,19 @@ class StatsView {
   }
 
   _showMore() {
-    const isOpen = +this._seeMoreElement.dataset.open;
+    const isOpen = Boolean(+this._seeMoreElement.dataset.open);
     console.log(isOpen);
     if (!isOpen) {
       this._densityContainer.style.maxHeight = "fit-content";
       this._seeMoreElement.textContent = "See less";
+      this._seeMoreElement.dataset.open = 1;
     }
 
     if (isOpen) {
       console.log(isOpen);
-      this._densityContainer.style.removePropety("max-height");
+      this._densityContainer.style.cssText = "";
       this._seeMoreElement.textContent = "See more";
+      this._seeMoreElement.dataset.open = 0;
     }
   }
 
